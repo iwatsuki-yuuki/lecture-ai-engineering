@@ -46,8 +46,29 @@ def load_model():
 pipe = llm.load_model()
 
 # --- Streamlit アプリケーション ---
-st.title("🤖 Gemma 2 Chatbot with Feedback")
-st.write("Gemmaモデルを使用したチャットボットです。回答に対してフィードバックを行えます。")
+
+
+st.title("松尾研第１回講義")
+st.write("UIとモデルが更新しました。")
+
+st.title("🤖 チャットボット\nby rinna/japanese-gpt2-xsmall")
+
+# CSSを適用してテキストの色を赤にする
+st.markdown(
+    """
+    <style>
+    .red-text {
+        color: red;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+name = st.text_input("あなたの名前", "ゲスト")
+st.markdown(f'<p class="red-text">こんにちは、{name}さん！</p>', unsafe_allow_html=True)
+st.write("rinna/japanese-gpt2-xsmallモデルを使用したチャットボットです。回答に対してフィードバックを行えます。")
+
 st.markdown("---")
 
 # --- サイドバー ---
