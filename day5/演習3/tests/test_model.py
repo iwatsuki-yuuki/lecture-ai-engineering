@@ -192,3 +192,4 @@ def test_model_regression(train_model):
 
     # 性能劣化が許容範囲内かチェック（例: 精度が5%以上下がっていないこと）
     assert current_acc >= previous_acc - 0.05, f"モデルの性能が劣化しています（旧: {previous_acc}, 新: {current_acc})"
+##変更
